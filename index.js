@@ -13,35 +13,35 @@ app.use(
   })
 );
 
-const newHotelOne = {
-  name: "Sunset Resort",
-  category: "Resort",
-  location: "12 Main Road, Anytown",
-  rating: 4.0,
-  reviews: [],
-  website: "https://sunset-example.com",
-  phoneNumber: "+1299655890",
-  checkInTime: "2:00 PM",
-  checkOutTime: "11:00 AM",
-  amenities: [
-    "Room Service",
-    "Horse riding",
-    "Boating",
-    "Kids Play Area",
-    "Bar",
-  ],
-  priceRange: "$$$$ (61+)",
-  reservationsNeeded: true,
-  isParkingAvailable: true,
-  isWifiAvailable: true,
-  isPoolAvailable: true,
-  isSpaAvailable: true,
-  isRestaurantAvailable: true,
-  photos: [
-    "https://example.com/hotel2-photo1.jpg",
-    "https://example.com/hotel2-photo2.jpg",
-  ],
-};
+// const newHotelOne = {
+//   name: "Sunset Resort",
+//   category: "Resort",
+//   location: "12 Main Road, Anytown",
+//   rating: 4.0,
+//   reviews: [],
+//   website: "https://sunset-example.com",
+//   phoneNumber: "+1299655890",
+//   checkInTime: "2:00 PM",
+//   checkOutTime: "11:00 AM",
+//   amenities: [
+//     "Room Service",
+//     "Horse riding",
+//     "Boating",
+//     "Kids Play Area",
+//     "Bar",
+//   ],
+//   priceRange: "$$$$ (61+)",
+//   reservationsNeeded: true,
+//   isParkingAvailable: true,
+//   isWifiAvailable: true,
+//   isPoolAvailable: true,
+//   isSpaAvailable: true,
+//   isRestaurantAvailable: true,
+//   photos: [
+//     "https://example.com/hotel2-photo1.jpg",
+//     "https://example.com/hotel2-photo2.jpg",
+//   ],
+// };
 
 async function createHotel(newHotel) {
   const hotel = new Hotel(newHotel);
@@ -233,7 +233,7 @@ app.post("/hotels/:hotelId", async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log("Server running on PORT:", PORT);
 });
